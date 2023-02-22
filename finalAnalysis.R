@@ -1,12 +1,7 @@
-#library(mlr3)
 library(mlr)
 library(ggplot2)
-#library(mlr3learners)
 library(party)
 library(h2o)
-# library(randomForest)
-# library(mlr3extralearners)
-# library(randomForestSRC)
 library(openxlsx)
 library(dplyr)
 
@@ -22,11 +17,6 @@ painData$lactate <- as.numeric(painData$lactate)
 
 painData[which(painData$fever %in% c("42","2")),"fever"] <- "0"
 painData[which(painData$pain_rlr == "ß"),"pain_rlr"] <- "0"
-#painData <- painData[which(!painData$fever %in% c("42","2")),]ß
-#painData <- painData[which(painData$pain_rlr %in% c("0","1","NA")),]
-
-#pData <- openxlsx::read.xlsx("C:/CUBA_Projects/2022_09_PainPrediction_Anshupa_Svetozar_Fahrrad_Andreas/Documents/pain.xlsx")
-#painData <- read.xlsx("C:/CUBA_Projects/2022_09_PainPrediction_Anshupa_Svetozar_Fahrrad_Andreas/Documents/pain.xlsx")
 
 # get all columns with continuous/numeric value
 numCols <- colnames(painData %>% select_if(function(col) length(unique(col)) > 3))
