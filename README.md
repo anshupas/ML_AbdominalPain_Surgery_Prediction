@@ -1,5 +1,3 @@
-# ML_AbdominalPain_Surgery_Prediction
-
 ## Machine Learning to support Clinical Decision Making in Patients with Acute Abdominal Pain
 
 ### Problem
