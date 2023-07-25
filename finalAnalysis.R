@@ -30,7 +30,7 @@ perfMatH2O <- data.frame()
 perfCforest <- data.frame()
 perfXgBoost <- data.frame()
 
-for(iterVal in 17:20){
+for(iterVal in 1:20){
   sampledIdx <- sample(1:nrow(painData),replace = FALSE)
   samplingList <- split(sampledIdx, ceiling(seq_along(sampledIdx)/(round(nrow(painData)/5)+1)))
   testListVal <- sample(1:length(samplingList),5)
